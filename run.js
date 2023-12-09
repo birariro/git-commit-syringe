@@ -1,24 +1,24 @@
 require('dotenv').config();
 
-const converter = require('./src/converter');
-const git_command = require('./src/git_command');
+const git = require('./src/GitCommander');
 
 const filePath = process.env.filePath
-
 const dates = process.env.dates.split(',');
 
-let lastCommitHash = git_command.getLastCommitHash();
+function readyModifyFile(filePath) {
+
+  const currentContent = require('fs').readFileSync(filePath, 'utf-8');
+  let newContent = currentContent === 'fizz' ? 'buzz' : 'fizz'
+
+  require('fs').writeFileSync(filePath, newContent);
+}
 
 for (const date of dates) {
-  
-  const timestamp = converter.yyyyMMddToTimeStamp(date)
 
-  git_command.initWorkingDirectory(filePath);
-  const treeHash = git_command.initStagingArea(filePath)
-  const commitHash = git_command.initRepository(treeHash, lastCommitHash, timestamp, `${date} message`);
+  readyModifyFile(filePath);
+  const tree = git.addDot(filePath)
+  const commit = git.commit(tree, date);
 
-  lastCommitHash = commitHash;
-
-  console.log(`${date} commit hash: ${commitHash} \n`);
+  console.log(`${date} commit hash: ${commit} \n`);
 }
 

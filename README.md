@@ -5,7 +5,6 @@ github 의 잔디를 심는다.
 
 ## Usage
 
-
 ### fork repository
 <p align="center">
     <img src="https://github.com/birariro/git-commit-syringe/blob/main/img/doc.png?raw=true"/>
@@ -19,7 +18,10 @@ github 의 잔디를 심는다.
 git clone https://github.com/"<your github name>"/git-commit-syringe.git && cd git-commit-syringe
 ```
 
-### .env file setup
+### setup dependency
+```npm install```
+
+### setup .env
 dates : 커밋할 날짜 모음 ('yyyy-mm-dd,yyyy-mm-dd')
 
 ### run js

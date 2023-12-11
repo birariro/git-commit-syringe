@@ -19,7 +19,7 @@ git clone https://github.com/"<your github name>"/git-commit-syringe.git && cd g
 ```
 
 ### setup dependency
-```npm install```
+```npm install dotenv```
 
 ### setup .env
 dates : 커밋할 날짜 모음 ('yyyy-mm-dd,yyyy-mm-dd')
@@ -57,9 +57,16 @@ git push origin
 </p>
 
 
-## my beautiful work
+## 커밋으로 문자 표현
 
-[Sample Link](https://github.com/birariro/git-commit-syringe-sample)
+tool.js 를 사용하여
+원하는 연도의 커밋 대시보드에 최대 6글자 문자를 만들기 위한 ```dates``` 를 제공받을 수 있습니다
+```
+node tool.js <"year"|2019> <"string"|HELLO>
+```
+
+[sample commit link](https://github.com/birariro/git-commit-syringe-sample)
 <p align="center">
     <img src="https://github.com/birariro/git-commit-syringe/blob/main/img/result.png?raw=true"/>
 </p>
+

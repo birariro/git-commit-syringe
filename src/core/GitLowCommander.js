@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 const terminalCommander = require('./TerminalCommander');
-const converter = require("./Converter");
+const dateCalculator = require("./DateCalculator");
 
 const author = getAuthorName();
 const email = getAuthorEmail();
@@ -45,7 +45,7 @@ function lastCommitResetHead(commitHash) {
 
 function createCommitByDate(treeHash, oldCommitHash, date) {
 
-  const timestamp = converter.yyyyMMddToTimeStamp(date)
+  const timestamp = dateCalculator.yyyyMMddToTimeStamp(date)
 
   const command = `echo "tree ${treeHash}
 parent ${oldCommitHash}

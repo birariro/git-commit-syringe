@@ -6,9 +6,9 @@ function addDot(filePath) {
     return tree
 }
 
-function commit(treeHash, date) {
+function commit(tree, date) {
     const oldCommit = gitRowCommander.getLastCommit();
-    return gitRowCommander.createCommitByDate(treeHash, oldCommit, date)
+    return gitRowCommander.createCommitByDate(tree, oldCommit, date)
 }
 
 module.exports = {

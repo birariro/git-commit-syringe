@@ -5,10 +5,10 @@ function yyyyMMddToTimeStamp(date) {
 
   return timestamp;
 }
-function findFirstYearSundayDate(year) {
+function findDrawStartSundayDate(year) {
 
   for(let day = 1 ; day < 8; day++){
-    const date = new Date(`${year}-01-${day}`);
+    const date = new Date(`${year}-02-${day}`);
     date.setUTCHours(0,0,0,0)
     const dayOfWeek = date.getDay();
 
@@ -22,5 +22,5 @@ function findFirstYearSundayDate(year) {
 
 
 module.exports = {
-  yyyyMMddToTimeStamp,findFirstYearSundayDate
+  yyyyMMddToTimeStamp,findDrawStartSundayDate
 };

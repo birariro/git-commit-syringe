@@ -1,13 +1,13 @@
 # git-commit-syringe
 
-English · [Korea](./README.ko.md)
+[English](./README.md) · Korea
 
-Create commit on any date you want<br>
-You can do something very interesting with this
+원하는 날짜의 git commit을 생성할 수 있다.<br>
+이것으로 Github에 그림을 그릴 수 있다.
 
-## 📄 Usage
+## 📄 사용법
 
-### fork and clone repository
+### repository fork 후 clone 합니다
 
 <p align="center">
     <img src="https://github.com/birariro/git-commit-syringe/blob/main/img/doc.png?raw=true"/>
@@ -18,26 +18,26 @@ You can do something very interesting with this
 git clone https://github.com/"<your github name>"/git-commit-syringe.git && cd git-commit-syringe
 ```
 
-### setup dependency
+### 의존성 다운로드
 
 `npm install dotenv`
 
-### setup .env
+### .env file 설정
 
-Enter the date you want in the `.env` file with the value `datae`
+`.env` 파일에 `datae` 변수의 값으로 원하는 날짜를 입력합니다
 
 ```
 filePath = "src/fizzbuzz.txt"
 dates = "<Enter the date you want>"
 ```
 
-You can do this as an example
+예를 들어 아래와 같이 입력할 수 있습니다.
 
 ```
 dates = "2024-01-01,2024-01-02"
 ```
 
-### run js
+### 실행
 
 ```sh
 node run.js
@@ -45,15 +45,15 @@ node run.js
 
 <br>
 
-## 🎥 Sample
+## 🎥 샘플
 
-### Before commit state
+### 사용전 커밋 상태
 
 <p align="center">
     <img src="https://github.com/birariro/git-commit-syringe/blob/main/img/old.png?raw=true"/>
 </p>
 
-### .env setup and run
+### .env 설정 및 실행
 
 ```
 dates = "2019-1-1,2019-1-2,2019-1-3,2019-1-4,2019-1-5,2019-1-6,2019-1-7,2019-1-8,2019-1-9,2019-1-10,2019-1-11,2019-1-12,2019-1-13,2019-1-14,2019-1-15,2019-1-16,2019-1-17,2019-1-18,2019-1-19,2019-1-20"
@@ -64,16 +64,16 @@ node run.js
 git push origin
 ```
 
-### After commit state
+### 사용후 커밋 상태
 
 <p align="center">
     <img src="https://github.com/birariro/git-commit-syringe/blob/main/img/new.png?raw=true"/>
 </p>
 
-## 🎨 Draw GitHub using commit
+## 🎨 GitHub commit 대시보드에 그림 그리기
 
-using tool.js
-You can get a `dates` for creating up to six characters on GitHub <br>
+tool.js 사용하여
+GitHub에서 최대 6개의 문자를 생성할 수 있는 `dates` 를 얻을 수 있습니다 <br>
 `node tool.js <"year"|2019> <"string"|HELLO>`
 
 ```
